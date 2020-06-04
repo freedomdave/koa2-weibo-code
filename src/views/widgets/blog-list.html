@@ -1,0 +1,9 @@
+{% macro field(blogList) %}
+<ul>
+  {% for blog in blogList %}
+    <li data-id="{{blog.id}}">{{blog.title}}</li>
+  {% endfor%}
+</ul>
+
+{% endmacro %}
+

@@ -1,6 +1,15 @@
 {% extends './src/views/layout.html' %}
+<!-- import 引入宏的方式 -->
+{% import "./src/views/widgets/blog-list.html" as blog %}
+
 
 {% block content %}
     <h1> {{ title }} </h1>
     <p> Welcome to {{ title }} </p>
+    <p>{{locals.name}}</p>
+    <!-- 引入组件 -->
+    {% include "./src/views/widgets/user-info.html"%}
+
+    {{ blog.field(blogList) }}
+
 {% endblock %}
