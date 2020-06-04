@@ -21,10 +21,10 @@ app.use(logger())
 app.use(require('koa-static')(__dirname + '/public'))
 
 app.use(views(__dirname + '/views', {
-  extension: 'nunjucks'
+  map: {"html":'nunjucks'}
 }))
 
-// logger
+// logger 日志
 app.use(async (ctx, next) => {
   const start = new Date()
   await next()
